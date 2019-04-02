@@ -1,3 +1,7 @@
-<p>
-  counter works!
-</p>
+<button mat-raised-button color="primary" (click)="increment()">Increment</button>
+
+<div>Current Count: {{ count$ | async }}</div>
+
+<button mat-raised-button color="accent" (click)="decrement()">Decrement</button>
+
+<button mat-raised-button color="warn" (click)="reset()">Reset Counter</button>

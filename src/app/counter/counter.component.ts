@@ -1,8 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
+import { Component, OnInit, Injector } from '@angular/core';
+import { createCustomElement } from '@angular/elements';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { Increment, Decrement, Reset } from './counter.actions';
+import { CounterIncrementComponent } from './counter-increment/counter-increment.component';
+import { CounterDecrementComponent } from './counter-decrement/counter-decrement.component';
+import { CounterResetComponent } from './counter-reset/counter-reset.component';
+
 
 @Component({
   selector: 'app-counter',
@@ -13,22 +16,16 @@ export class CounterComponent implements OnInit {
 
   count$: Observable<number>;
 
-  constructor(private store: Store<{ count: number }>) { }
+  constructor(private store: Store<{ count: number }>) {
+
+
+  }
 
   ngOnInit() {
     this.count$ = this.store.pipe(select('count'));
   }
 
-  increment() {
-    this.store.dispatch(new Increment());
-  }
 
-  decrement() {
-    this.store.dispatch(new Decrement());
-  }
 
-  reset() {
-    this.store.dispatch(new Reset());
-  }
 
 }

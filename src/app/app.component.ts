@@ -1,9 +1,10 @@
 import { Component, Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
-import { CounterComponent } from './counter/counter.component';
-import { CounterIncrementComponent } from './counter/counter-increment/counter-increment.component';
-import { CounterDecrementComponent } from './counter/counter-decrement/counter-decrement.component';
-import { CounterResetComponent } from './counter/counter-reset/counter-reset.component';
+import {
+  CounterComponent, CounterIncrementComponent,
+  CounterDecrementComponent, CounterResetComponent
+} from 'my-counter';
+
 
 @Component({
   selector: 'app-root',

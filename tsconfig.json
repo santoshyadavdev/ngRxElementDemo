@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "my-counter": [
+        "dist/my-counter"
+      ],
+      "my-counter/*": [
+        "dist/my-counter/*"
+      ]
+    }
   }
 }

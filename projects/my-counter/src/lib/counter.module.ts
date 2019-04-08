@@ -14,8 +14,10 @@ import { CounterResetComponent } from './counter-reset/counter-reset.component';
     CommonModule,
     MatButtonModule
   ],
-  entryComponents: [CounterComponent, CounterIncrementComponent,
-    CounterDecrementComponent, CounterResetComponent]
+  entryComponents: [CounterComponent,
+    CounterIncrementComponent,
+    CounterDecrementComponent,
+    CounterResetComponent]
 })
 export class CounterModule {
 

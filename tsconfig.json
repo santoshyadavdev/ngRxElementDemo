@@ -20,10 +20,7 @@
     ],
     "paths": {
       "my-counter": [
-        "dist/my-counter"
-      ],
-      "my-counter/*": [
-        "dist/my-counter/*"
+        "projects/my-counter/src/public-api"
       ]
     }
   }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Store, select } from '@ngrx/store';
+import { Store } from '@ngrx/store';
 import { Reset } from '../counter.actions';
 
 @Component({
@@ -13,7 +13,6 @@ export class CounterResetComponent implements OnInit {
 
   ngOnInit() {
   }
-
 
   reset() {
     this.store.dispatch(new Reset());

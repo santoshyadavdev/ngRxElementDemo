@@ -15,7 +15,7 @@ export class AppComponent {
   title = 'ngRxElementDemo';
 
   constructor(injector: Injector) {
-    // Convert `PopupComponent` to a custom element.
+    // Convert `CounterComponent` to a custom element.
     const CounterElement = createCustomElement(CounterComponent, { injector });
     // Register the custom element with the browser.
     customElements.define('counter-element', CounterElement);

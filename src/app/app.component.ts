@@ -14,17 +14,7 @@ import {
 export class AppComponent {
   title = 'ngRxElementDemo';
 
-  constructor(injector: Injector) {
-    // Convert `CounterComponent` to a custom element.
-    const CounterElement = createCustomElement(CounterComponent, { injector });
-    // Register the custom element with the browser.
-    customElements.define('counter-element', CounterElement);
+  constructor() {
 
-    const CounterIncrementElement = createCustomElement(CounterIncrementComponent, { injector });
-    customElements.define('counter-increment', CounterIncrementElement);
-    const CounterDecrementElement = createCustomElement(CounterDecrementComponent, { injector });
-    customElements.define('counter-decrement', CounterDecrementElement);
-    const CounterResetElement = createCustomElement(CounterResetComponent, { injector });
-    customElements.define('counter-reset', CounterResetElement);
   }
 }

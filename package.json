@@ -5,9 +5,9 @@
     "ng": "ng",
     "start": "ng build my-counter && ng serve --project=elementApp -o --port=4201",
     "build": "ng build",
-    "build-element": "ng build --prod --output-hashing=none",
-    "package-linux": "cat dist/ngRxElementDemo/{runtime,polyfills,scripts,main}.js | gzip > htmlapp/counter-element.js",
-    "package": "jscat ./dist/ngRxElementDemo/runtime.js ./dist/ngRxElementDemo/polyfills.js ./dist/ngRxElementDemo/scripts.js ./dist/ngRxElementDemo/main.js > htmlapp/counter-element.js",
+    "build-element": "ng build my-counter && ng build --project=counterelement --prod --output-hashing=none",
+    "package-linux": "cat dist/counterelement/{runtime,polyfills,scripts,main}.js | gzip > htmlapp/counter-element.js",
+    "package": "jscat ./dist/counterelement/runtime.js ./dist/counterelement/polyfills.js ./dist/counterelement/scripts.js ./dist/counterelement/main.js > htmlapp/counter-element.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
